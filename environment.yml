@@ -9,3 +9,6 @@ dependencies:
   - pandas
   - pip
   - scikit-learn
+  - pre-commit
+  - seaborn
+  - matplotlib
