@@ -1,0 +1,11 @@
+name: ml_colon
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - jupyter
+  - numpy
+  - pandas
+  - pip
+  - scikit-learn
