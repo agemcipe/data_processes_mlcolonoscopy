@@ -14,5 +14,6 @@ conda activate ml_colon
 ### Installation
 ```[bash]
 cd data_processes_mlcolonoscopy/
+pre-commit install
 pip install --editable .
 ```
