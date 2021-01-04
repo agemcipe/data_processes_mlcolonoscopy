@@ -15,6 +15,9 @@ RAW_CSV_FILENAME = "raw_data.csv"
 # The filepath of the raw data set
 RAW_CSV_PATH = DATA_DIR / RAW_CSV_FILENAME
 
+# The path of the directory in which the outputs of model trainings are stored
+OUTPUT_DIR = HERE.parents[2] / "output"
+
 # The columns that are expected in the raw data set
 CSV_HEADER = [
     "quality",
@@ -51,3 +54,29 @@ CSV_HEADER = [
 TARGET_VARIABLE = "relevant"
 
 assert TARGET_VARIABLE in CSV_HEADER
+
+# SEED used for random state throughout the application
+SEED = 12345
+
+# Score Metrics implemented for sklearn classifiers
+SCORE_METRICS = [
+    "accuracy",
+    "balanced_accuracy",
+    "top_k_accuracy",
+    "average_precision",
+    "neg_brier_score",
+    "f1",
+    "f1_micro",
+    "f1_macro",
+    "f1_weighted",
+    "f1_samples",
+    "neg_log_loss",
+    "precision",
+    "recall",
+    "jaccard",
+    "roc_auc",
+    "roc_auc_ovr",
+    "roc_auc_ovo",
+    "roc_auc_ovr_weighted",
+    "roc_auc_ovo_weighted",
+]

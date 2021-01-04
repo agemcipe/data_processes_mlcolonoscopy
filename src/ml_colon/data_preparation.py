@@ -3,7 +3,6 @@ import pathlib
 import pandas as pd
 
 import ml_colon
-from ml_colon import TARGET_VARIABLE
 
 
 def get_df_from_csv(filepath: pathlib.Path = ml_colon.RAW_CSV_PATH) -> pd.DataFrame:
@@ -36,6 +35,24 @@ def clean_df(df: pd.DataFrame) -> pd.DataFrame:
         the cleaned DataFrame
     """
     # remove rows with null values in target variable
-    df = df[~df[TARGET_VARIABLE].isnull()]
+    df = df[~df[ml_colon.TARGET_VARIABLE].isnull()]
 
     return df
+
+
+def get_clean_df_from_csv(
+    filepath: pathlib.Path = ml_colon.RAW_CSV_PATH,
+) -> pd.DataFrame:
+    """Get DataFrame from csv and clean it.
+
+    Parameters
+    ----------
+    filepath : pathlib.Path, optional
+        [description], by default ml_colon.RAW_CSV_PATH
+
+    Returns
+    -------
+    pd.DataFrame
+        the cleaned DataFrame
+    """
+    return clean_df(get_df_from_csv(filepath))
