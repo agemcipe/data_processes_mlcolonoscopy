@@ -1,0 +1,28 @@
+column_name,description
+quality,a measure of the quality of the recorded video.
+bits,number of bits used to encode that block in the video stream.
+intra_parts,number sub-blocks inside this block that are not encoded by making use of information in other frames.
+skip_parts,number sub-blocks inside this block that are straight-forward copied from another frame.
+inter_16x16_parts,number of sub-blocks inside this block making use of information in other frames and whose size is 16x16 pixels.
+inter_4x4_parts,number of sub-blocks inside this block making use of information in other frames and whose size is 4x4 pixels.
+inter_other_parts,number of sub-blocks inside this block making use of information in other frames and whose size is different from 16x16 and 4x4 pixels.
+non_zero_pixels,number of pixels different from 0 after encoding the block.
+frame_width,the width of the video frame in pixels.
+frame_height,the height of the video frame in pixels.
+movement_level,a measure of the level of movement of this frame with respect the previous one.
+mean,mean of the pixels of the encoded block.
+sub_mean_1,mean of the pixels contained in the first 32x32 sub-bock of the current block.
+sub_mean_2,mean of the pixels contained in the second 32x32 sub-bock of the current block.
+sub_mean_3,mean of the pixels contained in the third 32x32 sub-bock of the current block.
+sub_mean_4,mean of the pixels contained in the fourth 32x32 sub-bock of the current block.
+var_sub_blocks,variance of the four previous values.
+sobel_h,mean of the pixels of the encoded block after applying the Sobel operator in horizontal direction.
+sobel_v,mean of the pixels of the encoded block after applying the Sobel operator in vertical direction.
+variance,variance of the pixels of the encoded block.
+block_movement_h,a measure of the movement of the current block in the horizontal direction.
+block_movement_v,a measure of the movement of the current block in the vertical direction.
+var_movement_h,a measure of the variance of the movements inside the current block in the horizontal direction.
+var_movement_v,a measure of the variance of the movements inside the current block in the vertical direction.
+cost_1,a measure of the cost of encoding this block without partitioning it.
+cost_2,a measure of the cost of encoding this block without partitioning it and without considering any movement in it.
+relevant,the target variable that indicates whether the current block is relevant (1) or not (0)

@@ -21,3 +21,11 @@ repos:
      - id: isort
        additional_dependencies: [toml]
        verbose: true
+  - repo: local
+    hooks:
+      - id: jupyter-nb-clear-output
+        name: jupyter-nb-clear-output
+        files: ^notebooks/
+        stages: [commit]
+        language: system
+        entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace
