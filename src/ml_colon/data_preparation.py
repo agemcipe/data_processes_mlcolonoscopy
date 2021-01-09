@@ -1,5 +1,3 @@
-# type: ignore
-
 import pathlib
 
 import pandas as pd
@@ -61,8 +59,10 @@ def clean_df(df: pd.DataFrame) -> pd.DataFrame:
     pd.DataFrame
         the cleaned DataFrame
     """
-    # remove rows with null values in target variable
-    df = df[~df[ml_colon.TARGET_VARIABLE].isnull()]
+    df = df[
+        ~df[ml_colon.TARGET_VARIABLE].isnull()
+    ]  # remove any rows with relevant = null regardless of THRESHOLD
+    df = remove_nulls(df)
 
     return df
 
@@ -82,6 +82,4 @@ def get_clean_df_from_csv(
     pd.DataFrame
         the cleaned DataFrame
     """
-    no_nulls_in_target = clean_df(get_df_from_csv(filepath))
-    nulls_removed = remove_nulls(no_nulls_in_target)
-    return nulls_removed
+    return clean_df(get_df_from_csv(filepath))
