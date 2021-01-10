@@ -19,7 +19,7 @@ pip install --editable .
 ```
 
 ## Input Data
-The application expects the input data set under  `data/raw_dat.csv`. The input data set is part of the git repository.
+The application expects the input data set under  `data/raw_dat.csv`. The input data set is part of the git repository and needs to be supplied locally. Please copy it to this folder.
 
 ## Running MlFlow Dashboard
 The model training output from `machine_learning.ipynb` is stored in a local directory `data_processes_mlcolonoscopy/output` by the `mlflow` library. To run the dashboard you can execute 
@@ -34,8 +34,7 @@ Make sure you have the right environment enabled.
 The project has the following directory structure:
 ```
 ├── data
-│   ├── data_description.csv
-│   └── raw_data.csv
+│   └── data_description.csv
 ├── environment.yml
 ├── notebooks
 │   ├── data_exploration.ipynb
