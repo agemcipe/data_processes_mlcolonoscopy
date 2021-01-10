@@ -36,6 +36,6 @@ The folder "notebooks" contains three notebooks:
 - data_exploration where the exploratory data analysis is performed
 - machine_learning where the model learning and evaluation is performed
 
-The folder "rendered notebooks" contain the above notebooks in html format
+The folder "rendered notebooks" contain the above notebooks in html format. 
 The "src" folder contains code used for loading and cleaning the data. 
 All the files in the main folder are used for setting up the project environment.
