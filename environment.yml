@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python
+  - ipython==7.10.0
   - jupyter
   - numpy
   - pandas
