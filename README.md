@@ -29,13 +29,47 @@ mlflow ui
 ```
 Make sure you have the right environment enabled.
 
-## Files
-The "data" folder contains the data needed to run the code. 
-The folder "notebooks" contains three notebooks:
-- descriptive_analysis where the data is described and univariate analysis is performed
-- data_exploration where the exploratory data analysis is performed
-- machine_learning where the model learning and evaluation is performed
+## Delivered Files and Directories
 
-The folder "rendered notebooks" contain the above notebooks in html format. 
-The "src" folder contains code used for loading and cleaning the data. 
-All the files in the main folder are used for setting up the project environment.
+The project has the following directory structure:
+```
+├── data
+│   ├── data_description.csv
+│   └── raw_data.csv
+├── environment.yml
+├── notebooks
+│   ├── data_exploration.ipynb
+│   ├── descriptive_analysis.ipynb
+│   └── machine_learning.ipynb
+├── output
+├── pyproject.toml
+├── references
+│   └── Second assignment 2020-2021.pdf
+├── rendered_notebooks
+│   ├── data_exploration.html
+│   ├── descriptive_analysis.html
+│   └── machine_learning.html
+├── setup.py
+└── src
+    └── ml_colon
+        ├── __init__.py
+        └── data_preparation.py
+```
+Here we want to give a brief description of the most relevant files / directories:
+
+The `data` directory is used for storing the input data.
+
+The `environment.yml` contains a list of the needed python packages to run this application. 
+
+The `notebooks` directory contains the main part of the work separated in 3 notebooks:
+- `descriptive_analysis.ipynb` where the data is described and univariate analysis is performed
+- `data_exploration.ipynb` where the exploratory data analysis is performed
+- `machine_learning.ipynb` where the model learning and evaluation is performed
+
+The `rendered_notebooks` directory holds the 3 notebooks but rendered as `.html` files with output.
+
+The `src/ml_colon` directory holds code that is shared between the notebooks. In the `__init__.py` global variables are defined and in the `data_preparation.py` the function to load and clean the data is implemented.
+
+The `output` directory is used to store output of the model training and evaluation process.
+
+The `setup.py` file allows this package to be installed with pip.
